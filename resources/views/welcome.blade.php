@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    HealthyApp: Antonio Jimenez Nuñez y Cristina Morillo Cabezas
                 </div>
 
                 <div class="links">
