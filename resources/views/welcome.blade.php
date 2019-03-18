@@ -83,7 +83,7 @@
                 <div class="title m-b-md">
                     HealthyApp: Antonio Jimenez Nuñez y Cristina Morillo Cabezas
                 </div>
-                    Se trata de una app en la cual se almacena la informacion de la historia clínica de los pacientes
+
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
@@ -94,6 +94,7 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                Se trata de una app en la cual se almacena la informacion de la historia clínica de los pacientes
             </div>
         </div>
     </body>
