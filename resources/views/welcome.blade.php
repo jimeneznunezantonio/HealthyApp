@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #cce3f6;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -83,19 +83,19 @@
                 <div class="title m-b-md">
                     HealthyApp
                 </div>
-                Se trata de una app en la cual se almacena la informacion de la historia clínica de los pacientes.<br>
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-                Antonio Jiménez Núñez
+                Soy una app que almacena información de la historia clínica de mis pacientes y que ayuda al personal sanitario.<br>
+                <br><div class="links">
+                    <a href="https://laravel.com/docs">Regístrarse</a>
+                    <a href="https://laracasts.com">Iniciar Sesión</a>
+                    <a href="https://laravel-news.com">Ayuda</a>
+                    <a href="https://blog.laravel.com">Más sobre mí</a>
+                    <a href="https://nova.laravel.com">Contacto</a>
+
+                </div><br>
+                Antonio Jiménez Núñez<br>
+                Cristina Morillo Cabezas<br>
+                <br> Somos estudiantes del Grado de Ingeniería de la Salud, concretamente de la mención de informática clínica
             </div>
-            Cristina Morillo Cabezas
         </div>
     </body>
 </html>
