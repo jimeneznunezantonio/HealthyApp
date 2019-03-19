@@ -83,7 +83,7 @@
                 <div class="title m-b-md">
                     HealthyApp
                 </div>
-                Se trata de una app en la cual se almacena la informacion de la historia clínica de los pacientes
+                Se trata de una app en la cual se almacena la informacion de la historia clínica de los pacientes.<br>
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
