@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>HealthyApp</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -81,10 +81,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    HealthyApp: Antonio Jimenez Nuñez y Cristina Morillo Cabezas
+                    HealthyApp
                 </div>
-
-
+                Se trata de una app en la cual se almacena la informacion de la historia clínica de los pacientes
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
@@ -94,8 +93,9 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
-                Se trata de una app en la cual se almacena la informacion de la historia clínica de los pacientes
+                Antonio Jiménez Núñez
             </div>
+            Cristina Morillo Cabezas
         </div>
     </body>
 </html>
