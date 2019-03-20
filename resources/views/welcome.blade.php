@@ -94,7 +94,7 @@
                 </div><br>
                 Antonio Jiménez Núñez<br>
                 Cristina Morillo Cabezas<br>
-                <br> Somos los mejores estudiantes del Grado de Ingeniería de la Salud, concretamente de la mención de Informática Clínica
+                <br> Somos los entusiastas estudiantes del Grado de Ingeniería de la Salud, concretamente de la mención de Informática Clínica
             </div>
         </div>
     </body>
