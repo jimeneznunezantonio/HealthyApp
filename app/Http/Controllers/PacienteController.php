@@ -98,7 +98,7 @@ class PacienteController extends Controller
      * @param  \App\Paciente  $paciente
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Paciente $paciente)
+    public function update(Request $request, $nuhsa)
     {
         //
         $this->validate($request, [
@@ -120,6 +120,10 @@ class PacienteController extends Controller
             'nie'=>'required|max:255'
 
         ]);
+        $paciente = Paciente::find($nuhsa);
+        $paciente->fill($request->all());
+
+        $paciente->save();
     }
 
     /**
