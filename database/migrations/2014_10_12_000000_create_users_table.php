@@ -28,6 +28,7 @@ class CreateUsersTable extends Migration
             $table->string('speciality');
             $table->rememberToken();
             $table->timestamps();
+            $table->string('speciality');
 
         });
     }
