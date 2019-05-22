@@ -128,8 +128,13 @@ class PacienteController extends Controller
      * @param  \App\Paciente  $paciente
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Paciente $paciente)
+    public function destroy($nuhsa)
     {
         //
+        $paciente = Paciente::find($nuhsa);
+        $paciente->delete();
+        flash('Paciente borrado correctamente');
+
+        return redirect()->route('pacientes.index');
     }
 }
