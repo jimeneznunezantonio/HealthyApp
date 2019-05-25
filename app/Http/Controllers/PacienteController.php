@@ -83,10 +83,10 @@ class PacienteController extends Controller
      * @param  \App\Paciente  $paciente
      * @return \Illuminate\Http\Response
      */
-    public function edit($nuhsa)
+    public function edit($id)
     {
         //
-        $paciente = Paciente::find($nuhsa);
+        $paciente = Paciente::find($id);
 
         return view('pacientes/edit',['paciente'=> $paciente ]);
     }
@@ -98,7 +98,7 @@ class PacienteController extends Controller
      * @param  \App\Paciente  $paciente
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $nuhsa)
+    public function update(Request $request, $id)
     {
         //
         $this->validate($request, [
@@ -120,7 +120,7 @@ class PacienteController extends Controller
             'nie'=>'required|max:255'
 
         ]);
-        $paciente = Paciente::find($nuhsa);
+        $paciente = Paciente::find($id);
         $paciente->fill($request->all());
 
         $paciente->save();
@@ -132,10 +132,10 @@ class PacienteController extends Controller
      * @param  \App\Paciente  $paciente
      * @return \Illuminate\Http\Response
      */
-    public function destroy($nuhsa)
+    public function destroy($id)
     {
         //
-        $paciente = Paciente::find($nuhsa);
+        $paciente = Paciente::find($id);
         $paciente->delete();
         flash('Paciente borrado correctamente');
 
