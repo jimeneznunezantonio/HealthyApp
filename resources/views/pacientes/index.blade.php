@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Pacientes</div>
+                    <div class="panel-heading">Editar paciente</div>
 
                     <div class="panel-body">
                         @include('flash::message')
@@ -56,12 +56,12 @@
                                     <td>{{ $paciente->nationality }}</td>
                                     <td>{{ $paciente->nie }}</td>
                                     <td>
-                                        {!! Form::open(['route' => ['pacientes.edit',$paciente->nuhsa], 'method' => 'get']) !!}
+                                        {!! Form::open(['route' => ['pacientes.edit',$paciente->id], 'method' => 'get']) !!}
                                         {!!   Form::submit('Editar', ['class'=> 'btn btn-warning'])!!}
                                         {!! Form::close() !!}
                                     </td>
                                     <td>
-                                        {!! Form::open(['route' => ['pacientes.destroy',$paciente->nuhsa], 'method' => 'delete']) !!}
+                                        {!! Form::open(['route' => ['pacientes.destroy',$paciente->id], 'method' => 'delete']) !!}
                                         {!!   Form::submit('Borrar', ['class'=> 'btn btn-danger' ,'onclick' => 'if(!confirm("¿Está seguro?"))event.preventDefault();'])!!}
                                         {!! Form::close() !!}
 

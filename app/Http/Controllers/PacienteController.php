@@ -12,6 +12,11 @@ class PacienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
 
@@ -117,13 +122,16 @@ class PacienteController extends Controller
             'zipCode'=>'required|max:255',
             'passport'=>'required|max:255',
             'nationality'=>'required|max:255',
-            'nie'=>'required|max:255'
+            'nie'=>'required|max:255',
 
         ]);
         $paciente = Paciente::find($id);
         $paciente->fill($request->all());
 
         $paciente->save();
+        flash('Paciente modificado correctamente');
+
+        return redirect()->route('pacientes.index');
     }
 
     /**
