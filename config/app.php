@@ -136,6 +136,8 @@ return [
 
     'providers' => [
 
+        Collective\Html\HtmlServiceProvider::class,
+
         /*
          * Laravel Framework Service Providers...
          */
@@ -176,7 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         // Para presentar mensajes de confirmación
-        //Laracasts\Flash\FlashServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
     ],
 
@@ -192,6 +194,7 @@ return [
     */
 
     'aliases' => [
+
 
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
@@ -226,6 +229,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
 
     ],

@@ -45,12 +45,14 @@ class PacienteController extends Controller
     public function store(Request $request)
     {
         //
+
+        //dd($request);
         $this->validate($request, [
             'name' => 'required|max:255',
             'surname' => 'required|max:255',
             'surname2' => 'required|max:255',
-            'nuhsa' => 'required|nuhsa|max:255',
-            'bornDate' => 'required|date|before:now',
+            'nuhsa' => 'required|max:255',
+            'BornDate' => 'required|date|before:now',
             'weight'=> 'required|numeric',
             'heigth'=> 'required|numeric',
             'dni'=>'required|max:9',
@@ -66,6 +68,7 @@ class PacienteController extends Controller
         ]);
         $paciente = new Paciente($request->all());
         $paciente->save();
+
         flash('Paciente creado correctamente');
 
         return redirect()->route('pacientes.index');
@@ -108,17 +111,17 @@ class PacienteController extends Controller
         //
         $this->validate($request, [
             'name' => 'required|max:255',
-            'surname' => 'required|max:255',
+            'surname1' => 'required|max:255',
             'surname2' => 'required|max:255',
-            'nuhsa' => 'required|nuhsa|max:255',
-            'bornDate' => 'required|date|before:now',
+            'nuhsa' => 'required|max:255',
+            'BornDate' => 'required|date|before:now',
             'weight'=> 'required|numeric',
-            'heigth'=> 'required|numeric',
+            'height'=> 'required|numeric',
             'dni'=>'required|max:9',
             'telephone'=>'required|max:9',
             'email'=>'required|max:255',
             'password'=>'required|max:255',
-            'address'=>'required|max:255',
+            'Address'=>'required|max:255',
             'zipCode'=>'required|max:255',
             'passport'=>'required|max:255',
             'nationality'=>'required|max:255',

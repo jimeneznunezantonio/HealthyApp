@@ -10,7 +10,7 @@
                     <div class="panel-body">
                         @include('flash::message')
                         {!! Form::open(['route' => 'pacientes.create', 'method' => 'get']) !!}
-                        {!!   Form::submit('Crear paciente', ['class'=> 'btn btn-primary'])!!}
+                        {!! Form::submit('Crear paciente', ['class'=> 'btn btn-primary'])!!}
                         {!! Form::close() !!}
 
                         <br><br>
@@ -50,7 +50,7 @@
                                     <td>{{ $paciente->telephone }}</td>
                                     <td>{{ $paciente->email }}</td>
                                     <td>{{ $paciente->password }}</td>
-                                    <td>{{ $paciente->address }}</td>
+                                    <td>{{ $paciente->Address }}</td>
                                     <td>{{ $paciente->zipCode }}</td>
                                     <td>{{ $paciente->passport }}</td>
                                     <td>{{ $paciente->nationality }}</td>
