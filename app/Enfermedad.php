@@ -8,9 +8,10 @@ class Enfermedad extends Model
 {
     protected $fillable = ['name'];
 
-    public function pacientes()
+    public function paciente()
     {
-        return $this->hasMany('App\Paciente');
+        return $this->belongsTo('App\Paciente');
     }
     //
 }
+

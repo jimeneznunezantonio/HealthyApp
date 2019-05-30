@@ -18,5 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::delete('enfermedades/destroyAll', 'EnfermedadController@destroyAll')->name('enfermedades.destroyAll');
 Route::resource('pacientes','PacienteController');
-Route::resource('enfermedad','EnfermedadController');
+Route::resource('enfermedades','EnfermedadController');

@@ -13,6 +13,10 @@ class Paciente extends Model
     #{
     #    return $this->hasMany('App\Cita');
     #}
+    public function enfermedades()
+    {
+        return $this->hasMany('App\Enfermedad');
+    }
 
 
     public function getFullNameAttribute()

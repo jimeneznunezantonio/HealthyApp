@@ -15,6 +15,7 @@ class CreateEnfermedadsTable extends Migration
     {
         Schema::create('enfermedads', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->timestamps();
         });
     }
