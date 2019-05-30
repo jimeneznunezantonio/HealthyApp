@@ -12,7 +12,6 @@
 
                         {!! Form::model($enfermedad, [ 'route' => ['enfermedades.update',$enfermedad->id], 'method'=>'PUT', 'class'=>'form-inline']) !!}
                         <div class="form-group">
-
                             {!! Form::label('name', 'Nombre de la enfermedad') !!}
                             {!! Form::text('name', $enfermedad->name,['class'=>'form-control', 'required', 'autofocus']) !!}
                         </div>

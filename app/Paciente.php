@@ -23,5 +23,9 @@ class Paciente extends Model
     {
         return $this->name .' '.$this->surname;
     }
+    public function medicamentos()
+    {
+        return $this->hasMany('App\Medicamento');
+    }
     //
 }

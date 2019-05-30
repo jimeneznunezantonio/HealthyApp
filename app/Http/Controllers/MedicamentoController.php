@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Enfermedad;
+use App\Medicamento;
 use Illuminate\Http\Request;
 
-class EnfermedadController extends Controller
+class MedicamentoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,13 +20,10 @@ class EnfermedadController extends Controller
 
     public function index()
     {
+        $medicamentos = Medicamento::all();
 
+        return view('medicamentos/index',['medicamentos'=>$medicamentos]);
         //
-       // $enfermedades = Enfermedad::all();
-        $enfermedades = Enfermedad::all();
-
-        return view('enfermedades/index')->with('enfermedades', $enfermedades);
-
     }
 
     /**
@@ -36,8 +33,8 @@ class EnfermedadController extends Controller
      */
     public function create()
     {
+        return view('medicamentos/create');
         //
-        return view('enfermedades/create');
     }
 
     /**
@@ -48,29 +45,31 @@ class EnfermedadController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $this->validate($request, [
             'name' => 'required|max:255',
+            'presentation' => 'required|max:255',
+            'pharmCompany' => 'required|max:255',
         ]);
 
         //
-        $enfermedad = new Enfermedad($request->all());
-        $enfermedad->save();
+        $medicamento = new Medicamento($request->all());
+        $medicamento->save();
 
         // return redirect('especialidades');
 
-        flash('Enfermedad creada correctamente');
+        flash('Medicamento creado correctamente');
 
-        return redirect()->route('enfermedades.index');
+        return redirect()->route('medicamentos.index');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Enfermedad  $enfermedad
+     * @param  \App\Medicamento  $medicamento
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Medicamento $medicamento)
     {
         //
     }
@@ -78,55 +77,56 @@ class EnfermedadController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Enfermedad  $enfermedad
+     * @param  \App\Medicamento  $medicamento
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
-        $enfermedad = Enfermedad::find($id);
+        $medicamento = Medicamento::find($id);
 
-        return view('enfermedades/edit')->with('enfermedad', $enfermedad);
+        return view('medicamentos/edit')->with('medicamento', $medicamento);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Enfermedad  $enfermedad
+     * @param  \App\Medicamento  $medicamento
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
         $this->validate($request, [
             'name' => 'required|max:255',
+            'presentation' => 'required|max:255',
+            'pharmCompany' => 'required|max:255',
         ]);
 
-        $enfermedad = Enfermedad::find($id);
-        $enfermedad->fill($request->all());
+        $medicamento = Medicamento::find($id);
+        $medicamento->fill($request->all());
 
-        $enfermedad->save();
+        $medicamento->save();
 
-        flash('Enfermedad modificada correctamente');
+        flash('Medicamento modificado correctamente');
 
-        return redirect()->route('enfermedades.index');
+        return redirect()->route('medicamentos.index');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Enfermedad  $enfermedad
+     * @param  \App\Medicamento  $medicamento
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
+        $medicamento = Medicamento::find($id);
+        $medicamento->delete();
+        flash('Medicamento borrado correctamente');
+
+        return redirect()->route('medicamentos.index');
         //
-        $enfermedad = Enfermedad::find($id);
-        $enfermedad->delete();
-        flash('Enfermedad borrada correctamente');
-
-        return redirect()->route('enfermedades.index');
     }
-
 }

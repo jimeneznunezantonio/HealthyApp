@@ -6,11 +6,12 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">Crear enfermedad</div>
+                    <br>
 
                     <div class="panel-body">
                         @include('flash::message')
 
-                        {!! Form::open(['route' => 'enfermedades.store', 'class'=>'form-inline']) !!}
+                        {!! Form::open(['route' => 'enfermedades.store']) !!}
                         <div class="form-group">
                             {!! Form::label('name', 'Nombre de la enfermedad') !!}
                             {!! Form::text('name',null,['class'=>'form-control', 'required', 'autofocus']) !!}
