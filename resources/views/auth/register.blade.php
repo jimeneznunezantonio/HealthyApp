@@ -118,22 +118,6 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="speciality" class="col-md-4 col-form-label text-md-right">{{ __('Speciality') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="speciality" type="text" class="form-control{{ $errors->has('speciality') ? ' is-invalid' : '' }}" name="speciality" value="{{ old('speciality') }}" required>
-
-                                @if ($errors->has('speciality'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('speciality') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-
-
-                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">

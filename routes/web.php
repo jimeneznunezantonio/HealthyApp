@@ -22,3 +22,5 @@ Route::delete('enfermedades/destroyAll', 'EnfermedadController@destroyAll')->nam
 Route::resource('pacientes','PacienteController');
 Route::resource('enfermedades','EnfermedadController');
 Route::resource('medicamentos','MedicamentoController');
+Route::resource('especialidades', 'EspecialidadController');
+Route::resource('medicos', 'MedicoController');
