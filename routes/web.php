@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::delete('enfermedades/destroyAll', 'EnfermedadController@destroyAll')->name('enfermedades.destroyAll');
 Route::resource('pacientes','PacienteController');
 Route::resource('enfermedades','EnfermedadController');
+Route::resource('tratamientos','TratamientoController');
 Route::resource('medicamentos','MedicamentoController');
 Route::resource('especialidades', 'EspecialidadController');
 Route::resource('medicos', 'MedicoController');

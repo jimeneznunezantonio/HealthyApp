@@ -13,5 +13,9 @@ class Medicamento extends Model
         return $this->belongsTo('App\Tratamiento');
     }
 
-    //
+    //no falta tb que pertenece a un paciente?
+    /*public function paciente()
+    {
+        return $this->belongsTo('App\Paciente');
+    }*/
 }
