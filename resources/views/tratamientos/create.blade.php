@@ -12,19 +12,20 @@
 
                         {!! Form::open(['route' => 'tratamientos.store']) !!}
                         <div class="form-group">
-                            {!! Form::label('start_date', 'Fecha de inicio') !!}
+                            {!! Form::label('start_date', 'Fecha y hora de inicio del tratamiento') !!}
 
 
-                             <input type="datetime-local" id="start_date" name="start_date" class="form-control" value="{{Carbon\Carbon::now()->format('Y-m-d\Th:i')}}" />
+                            <input type="datetime-local" id="start_date" name="start_date" class="form-control" value="{{Carbon\Carbon::now()->format('Y-m-d\Th:i')}}" />
 
 
                         </div>
-
                         <div class="form-group">
-                            {!! Form::label('end_date', 'Fecha de fin') !!}
+                            {!! Form::label('end_date', 'Fecha y hora de fin del tratamiento') !!}
 
 
                             <input type="datetime-local" id="end_date" name="end_date" class="form-control" value="{{Carbon\Carbon::now()->format('Y-m-d\Th:i')}}" />
+
+
                         </div>
 
                         {!! Form::submit('Guardar',['class'=>'btn-primary btn']) !!}

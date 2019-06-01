@@ -5,19 +5,19 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Tratamientos</div>
+                    <div class="panel-heading">Tratamintos</div>
 
                     <div class="panel-body">
                         @include('flash::message')
                         {!! Form::open(['route' => 'tratamientos.create', 'method' => 'get']) !!}
-                        {!! Form::submit('Crear tratamiento', ['class'=> 'btn btn-primary'])!!}
+                        {!!   Form::submit('Crear tratamiento', ['class'=> 'btn btn-primary'])!!}
                         {!! Form::close() !!}
 
                         <br><br>
                         <table class="table table-striped table-bordered">
                             <tr>
-                                <th>Fecha de inicio</th>
-                                <th>Fecha de fin</th>
+                                <th>Fecha de Inicio</th>
+                                <th>Fecha de Fin</th>
                                 <th colspan="2">Acciones</th>
                             </tr>
 
@@ -45,5 +45,4 @@
                 </div>
             </div>
         </div>
-    </div>
 @endsection
