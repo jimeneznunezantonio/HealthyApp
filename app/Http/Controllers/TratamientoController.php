@@ -103,7 +103,7 @@ class TratamientoController extends Controller
         $pacientes = Paciente::all()->pluck('full_name','id');
         $medicamentos = Medicamento::all()->pluck('name','id');
 
-        return view('tratamientos/create',['tratamiento'=> $tratamiento,'medicos'=>$medicos, 'pacientes'=>$pacientes,'medicamentos'=>$medicamentos]);
+        return view('tratamientos/edit',['tratamiento'=> $tratamiento,'medicos'=>$medicos, 'pacientes'=>$pacientes,'medicamentos'=>$medicamentos]);
     }
 
     /**
