@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Medicamento;
 use App\Tratamiento;
 use Illuminate\Http\Request;
+use App\Cita;
+use App\Medico;
+use App\Paciente;
 
 class TratamientoController extends Controller
 {
@@ -33,8 +37,14 @@ class TratamientoController extends Controller
      */
     public function create()
     {
+        $medicos = Medico::all()->pluck('full_name','id');
+
+        $pacientes = Paciente::all()->pluck('full_name','id');
+
+        $medicamentos=Medicamento::all()->pluck('name','id');
+
         //
-        return view('tratamientos/create');
+        return view('tratamientos/create',['medicos'=>$medicos, 'pacientes'=>$pacientes,'medicamentos'=>$medicamentos]);
     }
 
     /**
@@ -49,6 +59,9 @@ class TratamientoController extends Controller
         $this->validate($request, [
             'start_date' => 'required|date|after:now',
             'end_date' => 'required|date|after:now',
+            'medico_id' => 'required|exists:medicos,id',
+            'paciente_id' => 'required|exists:pacientes,id',
+            'medicamento_id' => 'required|exists:medicamentos,id',
         ]);
 
 
@@ -86,8 +99,11 @@ class TratamientoController extends Controller
         //
 
         $tratamiento = Tratamiento::find($id);
+        $medicos = Medico::all()->pluck('full_name','id');
+        $pacientes = Paciente::all()->pluck('full_name','id');
+        $medicamentos = Medicamento::all()->pluck('name','id');
 
-        return view('tratamientos/edit')->with('tratamiento', $tratamiento);
+        return view('tratamientos/create',['tratamiento'=> $tratamiento,'medicos'=>$medicos, 'pacientes'=>$pacientes,'medicamentos'=>$medicamentos]);
     }
 
     /**
@@ -103,6 +119,9 @@ class TratamientoController extends Controller
         $this->validate($request, [
             'start_date' => 'required|date|after:now',
             'end_date' => 'required|date|after:now',
+            'medico_id' => 'required|exists:medicos,id',
+            'paciente_id' => 'required|exists:pacientes,id',
+            'medicamento_id' => 'required|exists:medicamentos,id',
 
         ]);
 

@@ -15,11 +15,11 @@ class Medico extends Model
         return $this->belongsTo('App\Especialidad');
     }
 
-    /*public function citas()
+    public function tratamientos()
     {
-        return $this->hasMany('App\Cita');
+        return $this->hasMany('App\Tratamiento');
     }
-    */
+
 
     public function getFullNameAttribute()
     {

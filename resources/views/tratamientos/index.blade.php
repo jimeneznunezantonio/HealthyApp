@@ -18,6 +18,9 @@
                             <tr>
                                 <th>Fecha de Inicio</th>
                                 <th>Fecha de Fin</th>
+                                <th>Medico</th>
+                                <th>Paciente</th>
+                                <th>Medicamento</th>
                                 <th colspan="2">Acciones</th>
                             </tr>
 
@@ -27,6 +30,9 @@
                                 <tr>
                                     <td>{{ $tratamiento->start_date }}</td>
                                     <td>{{ $tratamiento->end_date }}</td>
+                                    <td>{{ $tratamiento->medico->full_name }}</td>
+                                    <td>{{ $tratamiento->paciente->full_name}}</td>
+                                    <td>{{ $tratamiento->medicamento->name}}</td>
                                     <td>
                                         {!! Form::open(['route' => ['tratamientos.edit',$tratamiento->id], 'method' => 'get']) !!}
                                         {!!   Form::submit('Editar', ['class'=> 'btn btn-warning'])!!}
