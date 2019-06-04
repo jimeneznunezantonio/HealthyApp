@@ -81,13 +81,13 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{ url('/medicamentos') }}">
+                                        <a href="{{ url('/enf_pacs') }}">
                                             Enfermedades de los pacientes
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{ url('/medicamentos') }}">
-                                            Tratamientos de los Pacientes
+                                        <a href="{{ url('/trat_meds') }}">
+                                            Tratamientos con sus medicamentos
                                         </a>
                                     </li>
                                     <li>
