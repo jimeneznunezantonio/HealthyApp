@@ -81,6 +81,16 @@
                                         </a>
                                     </li>
                                     <li>
+                                        <a href="{{ url('/medicamentos') }}">
+                                            Enfermedades de los pacientes
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('/medicamentos') }}">
+                                            Tratamientos de los Pacientes
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="{{ url('/logout') }}"
                                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

@@ -12,6 +12,11 @@ class Enfermedad extends Model
     {
         return $this->belongsTo('App\Paciente');
     }
+
+    public function enf_pacs()
+    {
+        return $this->hasMany('App\Enf_Pac');
+    }
     //
 }
 

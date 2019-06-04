@@ -11,7 +11,10 @@
                         @include('flash::message')
 
                         {!! Form::model($tratamiento, [ 'route' => ['tratamientos.update',$tratamiento->id], 'method'=>'PUT']) !!}
-
+                        <div class="form-group">
+                            {!! Form::label('name', 'Nombre del tratamiento') !!}
+                            {!! Form::text('name',null,['class'=>'form-control', 'required', 'autofocus']) !!}
+                        </div>
                         <div class="form-group">
                             {!! Form::label('start_date', 'Fecha de inicio') !!}
                             <input type="datetime-local" id="start_date" name="start_date" class="form-control" value="{{Carbon\Carbon::now()->format('Y-m-d\Th:i')}}" />

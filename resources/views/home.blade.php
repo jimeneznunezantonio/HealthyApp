@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Bienvenido a nuestra App
                 </div>
             </div>
         </div>

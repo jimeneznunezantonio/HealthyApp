@@ -11,12 +11,12 @@ class Trat_Med extends Model
 
     public function medicamento()
     {
-        return $this->hasMany('App\Medicamento');
+        return $this->belongsTo('App\Medicamento');
 
     }
     public function tratamiento()
     {
-        return $this->hasMany('App\Tratamiento');
+        return $this->belongsTo('App\Tratamiento');
 
     }
 }

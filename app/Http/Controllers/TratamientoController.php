@@ -57,6 +57,7 @@ class TratamientoController extends Controller
     {
         //
         $this->validate($request, [
+            'name' => 'required|max:255',
             'start_date' => 'required|date|after:now',
             'end_date' => 'required|date|after:now',
             'medico_id' => 'required|exists:medicos,id',
@@ -117,6 +118,7 @@ class TratamientoController extends Controller
     {
         //
         $this->validate($request, [
+            'name' => 'required|max:255',
             'start_date' => 'required|date|after:now',
             'end_date' => 'required|date|after:now',
             'medico_id' => 'required|exists:medicos,id',

@@ -14,8 +14,8 @@ class Medicamento extends Model
     }
 
     //no falta tb que pertenece a un paciente?
-    public function tratamientos()
+    public function trat_med()
     {
-        return $this->hasMany('App\Tratamiento');
+        return $this->hasMany('App\Trat_Med');
     }
 }

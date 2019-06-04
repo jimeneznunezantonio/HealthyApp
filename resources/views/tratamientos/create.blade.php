@@ -12,6 +12,10 @@
 
                         {!! Form::open(['route' => 'tratamientos.store']) !!}
                         <div class="form-group">
+                            {!! Form::label('name', 'Nombre del tratamiento') !!}
+                            {!! Form::text('name',null,['class'=>'form-control', 'required', 'autofocus']) !!}
+                        </div>
+                        <div class="form-group">
                             {!! Form::label('start_date', 'Fecha y hora de inicio del tratamiento') !!}
 
 
@@ -43,6 +47,7 @@
                             <br>
                             {!! Form::select('medicamento_id', $medicamentos, ['class' => 'form-control']) !!}
                         </div>
+
 
                         {!! Form::submit('Guardar',['class'=>'btn-primary btn']) !!}
 

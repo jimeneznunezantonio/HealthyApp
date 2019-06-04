@@ -15,6 +15,7 @@ class CreateTratamientosTable extends Migration
     {
         Schema::create('tratamientos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->unsignedInteger('medico_id');

@@ -17,6 +17,10 @@ class Paciente extends Model
     {
         return $this->hasMany('App\Enfermedad');
     }
+    public function enf_pacs()
+    {
+        return $this->hasMany('App\Enf_Pac');
+    }
 
 
     public function getFullNameAttribute()

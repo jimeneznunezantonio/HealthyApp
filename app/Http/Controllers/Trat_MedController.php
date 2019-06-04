@@ -35,7 +35,7 @@ class Trat_MedController extends Controller
      */
     public function create()
     {
-        $tratamientos= Tratamiento::all()->pluck('start_date','end_date','id');
+        $tratamientos= Tratamiento::all()->pluck('name','id');
 
         $medicamentos = Medicamento::all()->pluck('name','id');
 
@@ -53,10 +53,11 @@ class Trat_MedController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'medicamento_id' => 'required|exists:medicamentos,id',
-            'tratamiento_id' => 'required|exists:tratamientos,id',
             'startMedDate' => 'required|date|after:now',
             'endMedDate' => 'required|date|after:now',
+            'dose' => 'required|max:255',
+            'tratamiento_id' => 'required|exists:tratamientos,id',
+            'medicamento_id' => 'required|exists:medicamentos,id',
 
         ]);
 
@@ -91,7 +92,7 @@ class Trat_MedController extends Controller
     {
         $trat_med = Trat_Med::find($id);
 
-        $tratamientos = Tratamiento::all()->pluck('start_date','end_date','id');
+        $tratamientos = Tratamiento::all()->pluck('name','id');
 
         $medicamentos = Medicamento::all()->pluck('name','id');
 
@@ -110,10 +111,11 @@ class Trat_MedController extends Controller
     public function update(Request $request,$id)
     {
         $this->validate($request, [
-            'tratamiento_id' => 'required|exists:tratamientos,id',
-            'medicamento_id' => 'required|exists:medicamentos,id',
             'startMedDate' => 'required|date|after:now',
             'endMedDate' => 'required|date|after:now',
+            'dose' => 'required|max:255',
+            'tratamiento_id' => 'required|exists:tratamientos,id',
+            'medicamento_id' => 'required|exists:medicamentos,id',
 
         ]);
         $trat_med = Trat_Med::find($id);
