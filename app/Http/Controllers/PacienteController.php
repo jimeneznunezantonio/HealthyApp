@@ -57,7 +57,7 @@ class PacienteController extends Controller
             'height'=> 'required|numeric',
             'dni'=>'required|max:9',
             'telephone'=>'required|max:9',
-            'email'=>'required|max:255',
+            'email'=>'required|max:255|email',
             'password'=>'required|max:255',
             'Address'=>'required|max:255',
             'zipCode'=>'required|max:255',
