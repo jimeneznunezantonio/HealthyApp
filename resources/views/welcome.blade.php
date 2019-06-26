@@ -93,8 +93,8 @@
 
                 </div><br>
                 Antonio Jiménez Núñez<br>
-                Cristina Morillo Cabezas<br>
-                <br> Somos estudiantes del Grado de Ingeniería de la Salud, concretamente de la mención de Informática Clínica
+                <br> Soy un estudiante del Grado de Ingeniería de la Salud, concretamente de la mención de Informática Clínica. Esta aplicación ha sido realizada para SITAR.
+
             </div>
         </div>
     </body>

@@ -18,8 +18,8 @@
                             <tr>
                                 <th>Fecha Inicio Enfermedad</th>
                                 <th>Fecha Fin Enfermedad</th>
-                                <th>Paciente</th>
                                 <th>Enfermedad</th>
+                                <th>Paciente</th>
 
 
                                 <th colspan="2">Acciones</th>

@@ -27,3 +27,4 @@ Route::resource('especialidades', 'EspecialidadController');
 Route::resource('medicos', 'MedicoController');
 Route::resource('trat_meds', 'Trat_MedController');
 Route::resource('enf_pacs', 'Enf_PacController');
+Route::resource('alarmas','AlarmaController');

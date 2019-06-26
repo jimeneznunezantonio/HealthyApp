@@ -30,14 +30,21 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                {!! Form::open(['route' => 'alarmas.store', 'method' => 'post']) !!}
+                {!!   Form::submit('Alarma', ['class'=> 'btn btn-primary'])!!}
+                {!! Form::close() !!}
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
 
+
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
+
+
+                    <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login &nbsp </a></li>
                             <li><a href="{{ url('/register') }}"> Registrar</a></li>
@@ -88,6 +95,11 @@
                                     <li>
                                         <a href="{{ url('/trat_meds') }}">
                                             Tratamientos con sus medicamentos
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('/alarmas') }}">
+                                            Lista de Alarmas
                                         </a>
                                     </li>
                                     <li>
